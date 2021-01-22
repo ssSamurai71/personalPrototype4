@@ -209,15 +209,17 @@ public class prototype4_script : MonoBehaviour
         posterText.text = "Poster Cost:" + posterCost.ToString("F0");
         posterToolTip.text = "Poster production: " + posterProduction.ToString("F0") + "\nAmount: " + posterAmount.ToString("F0");       
         upgradePosterText.text = "Upgrade Poster Cost:" + upgradePosterCost.ToString("F0"); 
-        upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString("F0") + "\nAmount: " + upgradePosterAmoun.ToString("F0");  
+        upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString("F0") + "\nAmount: " + upgradePosterAmount.ToString("F0");  
 
         videoText.text = "Video Cost:" + videoCost.ToString("F0");
         videoToolTip.text = "Video production: " + videoProduction.ToString("F0") + "\nAmount: " + videoAmount.ToString("F0");
-
-        
+        upgradeVideoText = "Upgrade Video Cost:" + upgradeVideoCost.ToString("F0");
+        upgradeVideoToolTip = "Boost: *" + upgradeVideoProduction.ToString("F0") + "\nAmount: "+ upgradeVideoAmount.ToString("F0");    
 
         motivationalClassText.text = "Motivational Class Cost:" + motivationalClassCost.ToString("F0");
         motivationalClassToolTip.text = "Motivational Class production: " + motivationalClassProduction.ToString("F0") + "\nAmount: " + motivationalClassAmount.ToString("F0");
+
+
 
         motivationalSpeakingText.text = "Motivational Speaking Cost:" + motivationalSpeakingCost.ToString("F0");
         motivationalSpeakingToolTip.text = "Motivational Speaking production: " + motivationalSpeakingProduction.ToString("F0") + "\nAmount: " + motivationalSpeakingAmount.ToString("F0");
