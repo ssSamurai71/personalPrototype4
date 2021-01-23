@@ -68,16 +68,16 @@ public class prototype4_script : MonoBehaviour
     public double upgradeMotivationalSpeakingProduction;
     public double upgradeMotivationalSpeakingAmount;
 
-    public Text motivationalSeurmText;
-    public Text motivationalSeurmToolTip;
-    public double motivationalSeurmCost;
-    public double motivationalSeurmProduction;
-    public double motivationalSeurmAmount;
-    public Text upgradeMotivationalSeurmText;
-    public Text upgradeMotivationalSeurmToolTip;
-    public double upgradeMotivationalSeurmCost;
-    public double upgradeMotivationalSeurmProduction;
-    public double upgradeMotivationalSeurmAmount;
+    public Text motivationalSerumText;
+    public Text motivationalSerumToolTip;
+    public double motivationalSerumCost;
+    public double motivationalSerumProduction;
+    public double motivationalSerumAmount;
+    public Text upgradeMotivationalSerumText;
+    public Text upgradeMotivationalSerumToolTip;
+    public double upgradeMotivationalSerumCost;
+    public double upgradeMotivationalSerumProduction;
+    public double upgradeMotivationalSerumAmount;
 
     public Text motivationalBookText;
     public Text motivationalBookToolTip;
@@ -158,12 +158,12 @@ public class prototype4_script : MonoBehaviour
         upgradeMotivationalSpeakingProduction = 1;
         upgradeMotivationalSpeakingAmount = 0;
 
-        motivationalSeurmCost = 1500;
-        motivationalSeurmProduction = 0;
-        motivationalSeurmAmount = 0;
-        upgradeMotivationalSeurmCost = 3000;
-        upgradeMotivationalSeurmProduction = 1;
-        upgradeMotivationalSeurmAmount = 0;
+        motivationalSerumCost = 1500;
+        motivationalSerumProduction = 0;
+        motivationalSerumAmount = 0;
+        upgradeMotivationalSerumCost = 3000;
+        upgradeMotivationalSerumProduction = 1;
+        upgradeMotivationalSerumAmount = 0;
 
         motivationalBookCost = 2000;
         motivationalBookProduction = 0;
@@ -190,7 +190,7 @@ public class prototype4_script : MonoBehaviour
     //function to calculate production
     void CalculateCurrency()
     {
-        currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSeurmProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
+        currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
         currency += currencyPerSec * Time.deltaTime; //multiple by delta time
     }
 
@@ -226,10 +226,10 @@ public class prototype4_script : MonoBehaviour
         upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + upgradeMotivationalSpeakingCost.ToString("F0");
         upgradeMotivationalSpeakingToolTip.text = "Boost: *" + upgradeMotivationalSpeakingProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalSpeakingAmount.ToString("F0");
 
-        motivationalSeurmText.text = "Motivational Seurm Cost:" + motivationalSeurmCost.ToString("F0");
-        motivationalSeurmToolTip.text = "Motivational Seurm production: " + motivationalSeurmProduction.ToString("F0") + "\nAmount: " + motivationalSeurmAmount.ToString("F0");
-        upgradeMotivationalSeurmText.text = "Upgrade Motivational Seurm \nCost: " + upgradeMotivationalSeurmCost.ToString("F0");
-        upgradeMotivationalSeurmToolTip.text = "Boost: *" + upgradeMotivationalSeurmProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalSeurmAmount.ToString("F0");
+        motivationalSerumText.text = "Motivational Serum Cost:" + motivationalSerumCost.ToString("F0");
+        motivationalSerumToolTip.text = "Motivational Serum production: " + motivationalSerumProduction.ToString("F0") + "\nAmount: " + motivationalSerumAmount.ToString("F0");
+        upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + upgradeMotivationalSerumCost.ToString("F0");
+        upgradeMotivationalSerumToolTip.text = "Boost: *" + upgradeMotivationalSerumProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalSerumAmount.ToString("F0");
 
         motivationalBookText.text = "Motivational Book Cost:" + motivationalBookCost.ToString("F0");
         motivationalBookToolTip.text = "Motivational Book production: " + motivationalBookProduction.ToString("F0") + "\nAmount: " + motivationalBookAmount.ToString("F0");
@@ -308,14 +308,14 @@ public class prototype4_script : MonoBehaviour
         }
     }
 
-    public void BuyMotivationalSeurm()
+    public void BuyMotivationalSerum()
     {
-        if(currency >= motivationalSeurmCost)
+        if(currency >= motivationalSerumCost)
         {
-            currency = currency - motivationalSeurmCost;
-            motivationalSeurmProduction += 200;
-            motivationalSeurmAmount += 1;
-            motivationalSeurmCost *= 1.7;
+            currency = currency - motivationalSerumCost;
+            motivationalSerumProduction += 200;
+            motivationalSerumAmount += 1;
+            motivationalSerumCost *= 1.7;
         }
     }
 
