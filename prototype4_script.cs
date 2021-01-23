@@ -190,15 +190,6 @@ public class prototype4_script : MonoBehaviour
     //function to calculate production
     void CalculateCurrency()
     {
-        bookProduction = bookProduction * upgradeBookProduction;
-        posterProduction = posterProduction * upgradePosterProduction;
-        videoProduction = videoProduction * upgradeVideoProduction;
-        motivationalBookProduction = motivationalBookProduction * upgradeMotivationalBookProduction;
-        motivationalClassProduction = motivationalClassProduction * upgradeMotivationalClassProduction;
-        motivationalSpeakingProduction = motivationalSpeakingProduction * upgradeMotivationalClassProduction;
-        motivationalSerumProduction = motivationalSerumProduction * upgradeMotivationalSerumProduction;
-        motivationalCultProduction = motivationalCultProduction * upgradeMotivationalCultProduction;
-        motivationalTEDTalksProduction = motivationalTEDTalksProduction * upgradeMotivationalTEDTalksProduction;
         currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
         currency += currencyPerSec * Time.deltaTime; //multiple by delta time
     }
@@ -367,6 +358,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeBookCost; 
             upgradeBookProduction *= 1.1;
+            bookProduction *= upgradeBookProduction;
             upgradeBookAmount += 1;
             upgradeBookCost *= 1.2;
         }
@@ -378,6 +370,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradePosterCost; 
             upgradePosterProduction *= 1.2;
+            posterProduction *= upgradePosterProduction;
             upgradePosterAmount += 1;
             upgradePosterCost *= 1.3;
         }
@@ -389,6 +382,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeVideoCost; 
             upgradeVideoProduction *= 1.3;
+            videoProduction *= upgradeVideoProduction;
             upgradeVideoAmount += 1;
             upgradeVideoCost *= 1.4;
         }
@@ -400,6 +394,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalClassCost; 
             upgradeMotivationalClassProduction *= 1.5;
+            motivationalClassProduction *= upgradeMotivationalClassProduction;
             upgradeMotivationalClassAmount += 1;
             upgradeMotivationalClassCost *= 1.5;
         }
@@ -411,6 +406,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalSpeakingCost; 
             upgradeMotivationalSpeakingProduction *= 1.6;
+            motivationalSpeakingProduction *= upgradeMotivationalSpeakingProduction;
             upgradeMotivationalSpeakingAmount += 1;
             upgradeMotivationalSpeakingCost *= 1.6;
         }
@@ -422,6 +418,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalSerumCost; 
             upgradeMotivationalSerumProduction *= 1.7;
+            motivationalSerumProduction *= upgradeMotivationalSerumProduction;
             upgradeMotivationalSerumAmount += 1;
             upgradeMotivationalSerumCost *= 1.7;
         }
@@ -433,6 +430,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalBookCost; 
             upgradeMotivationalBookProduction *= 1.8;
+            motivationalBookProduction *= upgradeMotivationalBookProduction;
             upgradeMotivationalBookAmount += 1;
             upgradeMotivationalBookCost *= 1.8;
         }
@@ -444,6 +442,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalCultCost; 
             upgradeMotivationalCultProduction *= 1.9;
+            motivationalCultProduction *= upgradeMotivationalCultProduction;
             upgradeMotivationalCultAmount += 1;
             upgradeMotivationalCultCost *= 1.9;
         }
@@ -455,6 +454,7 @@ public class prototype4_script : MonoBehaviour
         {
             currency = currency - upgradeMotivationalTEDTalksCost; 
             upgradeMotivationalTEDTalksProduction *= 2;
+            motivationalTEDTalksProduction *= upgradeMotivationalTEDTalksProduction;
             upgradeMotivationalTEDTalksAmount += 1;
             upgradeMotivationalTEDTalksCost *= 2;
         }
