@@ -421,7 +421,7 @@ public class prototype4_script : MonoBehaviour
 
     public void BuyMotivationalBookUpgrade()
     {
-        if(currency >= )
+        if(currency >= upgradeMotivationalBookCost)
         {
             currency = currency - upgradeMotivationalBookCost; 
             upgradeMotivationalBookProduction *= 1.8;
