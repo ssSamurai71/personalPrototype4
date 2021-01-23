@@ -257,7 +257,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= bookCost)
         {
             currency = currency - bookCost;
-            bookProduction += 1;
+            bookProduction += 0.1;
             bookAmount += 1;
             bookCost *= 1.5;
         }
@@ -268,7 +268,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= posterCost)
         {
             currency = currency - posterCost;
-            posterProduction += 5;
+            posterProduction += 1;
             posterAmount += 1;
             posterCost *= 1.6;
         }
@@ -279,7 +279,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= videoCost)
         {
             currency = currency - videoCost;
-            videoProduction += 10;
+            videoProduction += 5;
             videoAmount += 1;
             videoCost *= 1.7;
         }
@@ -290,7 +290,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalClassCost)
         {
             currency = currency - motivationalClassCost;
-            motivationalClassProduction += 50;
+            motivationalClassProduction += 10;
             motivationalClassAmount += 1;
             motivationalClassCost *= 1.8;
         }
@@ -301,7 +301,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalSpeakingCost)
         {
             currency = currency - motivationalSpeakingCost;
-            motivationalSpeakingProduction += 100;
+            motivationalSpeakingProduction += 50;
             motivationalSpeakingAmount += 1;
             motivationalSpeakingCost *= 1.9;
         }
@@ -312,7 +312,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalSerumCost)
         {
             currency = currency - motivationalSerumCost;
-            motivationalSerumProduction += 200;
+            motivationalSerumProduction += 100;
             motivationalSerumAmount += 1;
             motivationalSerumCost *= 2;
         }
@@ -323,7 +323,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalBookCost)
         {
             currency = currency - motivationalBookCost;
-            motivationalBookProduction += 250;
+            motivationalBookProduction += 200;
             motivationalBookAmount += 1;
             motivationalBookCost *= 2.1;
         }
@@ -334,7 +334,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalCultCost)
         {
             currency = currency - motivationalCultCost;
-            motivationalCultProduction += 500;
+            motivationalCultProduction += 400;
             motivationalCultAmount += 1;
             motivationalCultCost *= 2.2;
         }
@@ -345,7 +345,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalTEDTalksCost)
         {
             currency = currency - motivationalTEDTalksCost;
-            motivationalTEDTalksProduction += 1000;
+            motivationalTEDTalksProduction += 800;
             motivationalTEDTalksAmount += 1;
             motivationalTEDTalksCost *= 2.3;
         }
