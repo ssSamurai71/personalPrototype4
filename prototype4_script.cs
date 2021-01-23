@@ -204,47 +204,47 @@ public class prototype4_script : MonoBehaviour
         bookText.text = "Book Cost:" + bookCost.ToString("F0");
         bookToolTip.text = "Book production: " + bookProduction.ToString("F0") + "\nAmount: " + bookAmount.ToString("F0");
         upgradeBookText.text = "Upgrade Book \nCost: " + upgradeBookCost.ToString("F0");
-        upgradeBookToolTip.text = "Boost: *" + upgradeBookProduction.ToString("F0") + "\nAmount: " + upgradeBookAmount.ToString("F0");
+        upgradeBookToolTip.text = "Boost: *" + upgradeBookProduction.ToString() + "\nAmount: " + upgradeBookAmount.ToString("F0");
 
         posterText.text = "Poster Cost:" + posterCost.ToString("F0");
         posterToolTip.text = "Poster production: " + posterProduction.ToString("F0") + "\nAmount: " + posterAmount.ToString("F0");
         upgradePosterText.text = "Upgrade Poster \nCost:" + upgradePosterCost.ToString("F0");
-        upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString("F0") + "\nAmount: " + upgradePosterAmount.ToString("F0");
+        upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString() + "\nAmount: " + upgradePosterAmount.ToString("F0");
 
         videoText.text = "Video Cost:" + videoCost.ToString("F0");
         videoToolTip.text = "Video production: " + videoProduction.ToString("F0") + "\nAmount: " + videoAmount.ToString("F0");
         upgradeVideoText.text = "Upgrade Video \nCost:" + upgradeVideoCost.ToString("F0");
-        upgradeVideoToolTip.text = "Boost: *" + upgradeVideoProduction.ToString("F0") + "\nAmount: "+ upgradeVideoAmount.ToString("F0");
+        upgradeVideoToolTip.text = "Boost: *" + upgradeVideoProduction.ToString() + "\nAmount: "+ upgradeVideoAmount.ToString("F0");
 
         motivationalClassText.text = "Motivational Class Cost:" + motivationalClassCost.ToString("F0");
         motivationalClassToolTip.text = "Motivational Class production: " + motivationalClassProduction.ToString("F0") + "\nAmount: " + motivationalClassAmount.ToString("F0");
         upgradeMotivationalClassText.text = "Upgrade Motivational Class \nCost:" + upgradeMotivationalClassCost.ToString("F0"); 
-        upgradeMotivationalClassToolTip.text = "Boost: *" + upgradeMotivationalClassProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
+        upgradeMotivationalClassToolTip.text = "Boost: *" + upgradeMotivationalClassProduction.ToString() + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
 
         motivationalSpeakingText.text = "Motivational Speaking Cost:" + motivationalSpeakingCost.ToString("F0");
         motivationalSpeakingToolTip.text = "Motivational Speaking production: " + motivationalSpeakingProduction.ToString("F0") + "\nAmount: " + motivationalSpeakingAmount.ToString("F0");
         upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + upgradeMotivationalSpeakingCost.ToString("F0");
-        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + upgradeMotivationalSpeakingProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalSpeakingAmount.ToString("F0");
+        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + upgradeMotivationalSpeakingProduction.ToString() + "\nAmount: " + upgradeMotivationalSpeakingAmount.ToString("F0");
 
         motivationalSerumText.text = "Motivational Serum Cost:" + motivationalSerumCost.ToString("F0");
         motivationalSerumToolTip.text = "Motivational Serum production: " + motivationalSerumProduction.ToString("F0") + "\nAmount: " + motivationalSerumAmount.ToString("F0");
         upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + upgradeMotivationalSerumCost.ToString("F0");
-        upgradeMotivationalSerumToolTip.text = "Boost: *" + upgradeMotivationalSerumProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalSerumAmount.ToString("F0");
+        upgradeMotivationalSerumToolTip.text = "Boost: *" + upgradeMotivationalSerumProduction.ToString() + "\nAmount: " + upgradeMotivationalSerumAmount.ToString("F0");
 
         motivationalBookText.text = "Motivational Book Cost:" + motivationalBookCost.ToString("F0");
         motivationalBookToolTip.text = "Motivational Book production: " + motivationalBookProduction.ToString("F0") + "\nAmount: " + motivationalBookAmount.ToString("F0");
         upgradeMotivationalBookText.text = "Upgrade Motivational Book \nCost:" + upgradeMotivationalBookCost.ToString("F0");
-        upgradeMotivationalBookToolTip.text = "Boost: *" + upgradeMotivationalBookProduction.ToString("F0") + "\nAMount: " + upgradeMotivationalBookAmount.ToString("F0");
+        upgradeMotivationalBookToolTip.text = "Boost: *" + upgradeMotivationalBookProduction.ToString("") + "\nAMount: " + upgradeMotivationalBookAmount.ToString("F0");
  
         motivationalCultText.text = "Motivational Cult Cost:" + motivationalCultCost.ToString("F0");
         motivationalCultToolTip.text = "Motivational Cult production: " + motivationalCultProduction.ToString("F0") + "\nAmount: " + motivationalCultAmount.ToString("F0");
         upgradeMotivationalCultText.text = "Upgrade Motivational Cult \nCost:" + upgradeMotivationalCultCost.ToString("F0");
-        upgradeMotivationalCultToolTip.text = "Boost: *" + upgradeMotivationalCultProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
+        upgradeMotivationalCultToolTip.text = "Boost: *" + upgradeMotivationalCultProduction.ToString("") + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
 
         motivationalTEDTalksText.text = "Motivational TED Talks Cost:" + motivationalTEDTalksCost.ToString("F0");
         motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + motivationalTEDTalksProduction.ToString("F0") + "\nAmount: " + motivationalTEDTalksAmount.ToString("F0");
         upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + upgradeMotivationalTEDTalksCost.ToString("F0");
-        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + upgradeMotivationalTEDTalksProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalTEDTalksAmount.ToString("F0");
+        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + upgradeMotivationalTEDTalksProduction.ToString("") + "\nAmount: " + upgradeMotivationalTEDTalksAmount.ToString("F0");
     }
 
     public void ClickCurrency()
@@ -357,7 +357,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeBookCost)
         {
             currency = currency - upgradeBookCost; 
-            upgradeBookProduction *= 1.1;
+            upgradeBookProduction += 0.1;
             bookProduction *= upgradeBookProduction;
             upgradeBookAmount += 1;
             upgradeBookCost *= 1.2;
@@ -369,7 +369,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradePosterCost)
         {
             currency = currency - upgradePosterCost; 
-            upgradePosterProduction *= 1.2;
+            upgradePosterProduction += 0.2;
             posterProduction *= upgradePosterProduction;
             upgradePosterAmount += 1;
             upgradePosterCost *= 1.3;
@@ -381,7 +381,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeVideoCost)
         {
             currency = currency - upgradeVideoCost; 
-            upgradeVideoProduction *= 1.3;
+            upgradeVideoProduction += 0.3;
             videoProduction *= upgradeVideoProduction;
             upgradeVideoAmount += 1;
             upgradeVideoCost *= 1.4;
@@ -393,7 +393,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalClassCost)
         {
             currency = currency - upgradeMotivationalClassCost; 
-            upgradeMotivationalClassProduction *= 1.5;
+            upgradeMotivationalClassProduction += 0.5;
             motivationalClassProduction *= upgradeMotivationalClassProduction;
             upgradeMotivationalClassAmount += 1;
             upgradeMotivationalClassCost *= 1.5;
@@ -405,7 +405,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalSpeakingCost)
         {
             currency = currency - upgradeMotivationalSpeakingCost; 
-            upgradeMotivationalSpeakingProduction *= 1.6;
+            upgradeMotivationalSpeakingProduction += 0.6;
             motivationalSpeakingProduction *= upgradeMotivationalSpeakingProduction;
             upgradeMotivationalSpeakingAmount += 1;
             upgradeMotivationalSpeakingCost *= 1.6;
@@ -417,7 +417,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalSerumCost)
         {
             currency = currency - upgradeMotivationalSerumCost; 
-            upgradeMotivationalSerumProduction *= 1.7;
+            upgradeMotivationalSerumProduction += 0.7;
             motivationalSerumProduction *= upgradeMotivationalSerumProduction;
             upgradeMotivationalSerumAmount += 1;
             upgradeMotivationalSerumCost *= 1.7;
@@ -429,7 +429,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalBookCost)
         {
             currency = currency - upgradeMotivationalBookCost; 
-            upgradeMotivationalBookProduction *= 1.8;
+            upgradeMotivationalBookProduction += 0.8;
             motivationalBookProduction *= upgradeMotivationalBookProduction;
             upgradeMotivationalBookAmount += 1;
             upgradeMotivationalBookCost *= 1.8;
@@ -441,7 +441,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalCultCost)
         {
             currency = currency - upgradeMotivationalCultCost; 
-            upgradeMotivationalCultProduction *= 1.9;
+            upgradeMotivationalCultProduction += 0.9;
             motivationalCultProduction *= upgradeMotivationalCultProduction;
             upgradeMotivationalCultAmount += 1;
             upgradeMotivationalCultCost *= 1.9;
@@ -453,7 +453,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= upgradeMotivationalTEDTalksCost)
         {
             currency = currency - upgradeMotivationalTEDTalksCost; 
-            upgradeMotivationalTEDTalksProduction *= 2;
+            upgradeMotivationalTEDTalksProduction += 1;
             motivationalTEDTalksProduction *= upgradeMotivationalTEDTalksProduction;
             upgradeMotivationalTEDTalksAmount += 1;
             upgradeMotivationalTEDTalksCost *= 2;
