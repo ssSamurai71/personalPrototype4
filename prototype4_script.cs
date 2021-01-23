@@ -351,4 +351,104 @@ public class prototype4_script : MonoBehaviour
             motivationalTEDTalksCost *= 2;
         }
     }
+
+    //Upgrades PEOPLE UPGRADES!!!
+    public void BuyBookUpgrade()
+    {
+        if(currency >= upgradeBookCost)
+        {
+            currency = currency - upgradeBookCost; 
+            upgradeBookProduction *= 1.1;
+            upgradeBookAmount += 1;
+            upgradeBookCost *= 1.2;
+        }
+    }
+
+    public void BuyPosterUpgrade()
+    {
+        if(currency >= upgradePosterCost)
+        {
+            currency = currency - upgradePosterCost; 
+            upgradePosterProduction *= 1.2;
+            upgradePosterAmount += 1;
+            upgradePosterCost *= 1.3;
+        }
+    }
+
+    public void BuyVideoUpgrade()
+    {
+        if(currency >= upgradeVideoCost)
+        {
+            currency = currency - upgradeVideoCost; 
+            upgradeVideoProduction *= 1.3;
+            upgradeVideoAmount += 1;
+            upgradeVideoCost *= 1.4;
+        }
+    }
+
+    public void BuyMotivationalClassUpgrade()
+    {
+        if(currency >= upgradeMotivationalClassCost)
+        {
+            currency = currency - upgradeMotivationalClassCost; 
+            upgradeMotivationalClassProduction *= 1.5;
+            upgradeMotivationalClassAmount += 1;
+            upgradeMotivationalClassCost *= 1.5;
+        }
+    }
+
+    public void BuyMotivationalSpeakingUpgrade()
+    {
+        if(currency >= upgradeMotivationalSpeakingCost)
+        {
+            currency = currency - upgradeMotivationalSpeakingCost; 
+            upgradeMotivationalSpeakingProduction *= 1.6;
+            upgradeMotivationalSpeakingAmount += 1;
+            upgradeMotivationalSpeakingCost *= 1.6;
+        }
+    }
+
+    public void BuyMotivationalSerumUpgrade()
+    {
+        if(currency >= upgradeMotivationalSerumCost)
+        {
+            currency = currency - upgradeMotivationalSerumCost; 
+            upgradeMotivationalSerumProduction *= 1.7;
+            upgradeMotivationalSerumAmount += 1;
+            upgradeMotivationalSerumCost *= 1.7;
+        }
+    }
+
+    public void BuyMotivationalBookUpgrade()
+    {
+        if(currency >= )
+        {
+            currency = currency - upgradeMotivationalBookCost; 
+            upgradeMotivationalBookProduction *= 1.8;
+            upgradeMotivationalBookAmount += 1;
+            upgradeMotivationalBookCost *= 1.8;
+        }
+    }
+
+    public void BuyMotivationalCultUpgrade()
+    {
+        if(currency >= upgradeMotivationalCultCost)
+        {
+            currency = currency - upgradeMotivationalCultCost; 
+            upgradeMotivationalCultProduction *= 1.9;
+            upgradeMotivationalCultAmount += 1;
+            upgradeMotivationalCultCost *= 1.9;
+        }
+    }
+
+    public void BuyMotivationalTEDTalksUpgrade()
+    {
+        if(currency >= upgradeMotivationalTEDTalksCost)
+        {
+            currency = currency - upgradeMotivationalTEDTalksCost; 
+            upgradeMotivationalTEDTalksProduction *= 2;
+            upgradeMotivationalTEDTalksAmount += 1;
+            upgradeMotivationalTEDTalksCost *= 2;
+        }
+    }
 }
