@@ -117,6 +117,75 @@ public class prototype4_script : MonoBehaviour
         Application.Quit();
     }
 
+    public void reset()
+    {
+        currency = 0;
+        currencyPerClickValue = 1;
+        
+        bookCost = 10;
+        bookProduction = 0;
+        bookAmount = 0;
+        upgradeBookCost = 50;
+        upgradeBookProduction = 1;
+        upgradeBookAmount = 0;
+
+        posterCost = 50;
+        posterProduction = 0;
+        posterAmount = 0;
+        upgradePosterCost = 100;
+        upgradePosterProduction = 1;
+        upgradePosterAmount = 0;
+    
+        videoCost = 100;
+        videoProduction = 0;
+        videoAmount = 0;
+        upgradeVideoCost = 200;
+        upgradeVideoProduction = 1;
+        upgradeVideoAmount = 0;
+        
+        motivationalClassCost = 500;
+        motivationalClassProduction = 0;
+        motivationalClassAmount = 0;
+        upgradeMotivationalClassCost = 1000;
+        upgradeMotivationalClassProduction = 1;
+        upgradeMotivationalClassAmount = 0;
+
+        motivationalSpeakingCost = 1000;
+        motivationalSpeakingProduction = 0;
+        motivationalSpeakingAmount = 0;
+        upgradeMotivationalSpeakingCost = 2000;
+        upgradeMotivationalSpeakingProduction = 1;
+        upgradeMotivationalSpeakingAmount = 0;
+
+        motivationalSerumCost = 1500;
+        motivationalSerumProduction = 0;
+        motivationalSerumAmount = 0;
+        upgradeMotivationalSerumCost = 3000;
+        upgradeMotivationalSerumProduction = 1;
+        upgradeMotivationalSerumAmount = 0;
+
+        motivationalBookCost = 2000;
+        motivationalBookProduction = 0;
+        motivationalBookAmount = 0;
+        upgradeMotivationalBookCost = 4000;
+        upgradeMotivationalBookProduction = 1;
+        upgradeMotivationalBookAmount = 0;
+
+        motivationalCultCost = 2500;
+        motivationalCultProduction = 0;
+        motivationalCultAmount = 0;
+        upgradeMotivationalCultCost = 5000;
+        upgradeMotivationalCultProduction = 1;
+        upgradeMotivationalCultAmount = 0;
+
+        motivationalTEDTalksCost = 3000;
+        motivationalTEDTalksProduction = 0;
+        motivationalTEDTalksAmount = 0;
+        upgradeMotivationalTEDTalksCost = 6000;
+        upgradeMotivationalTEDTalksProduction = 1;
+        upgradeMotivationalTEDTalksAmount = 0;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
