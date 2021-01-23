@@ -259,7 +259,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - bookCost;
             bookProduction += 1;
             bookAmount += 1;
-            bookCost *= 1.2;
+            bookCost *= 1.5;
         }
     }
 
@@ -270,7 +270,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - posterCost;
             posterProduction += 5;
             posterAmount += 1;
-            posterCost *= 1.3;
+            posterCost *= 1.6;
         }
     }
 
@@ -281,7 +281,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - videoCost;
             videoProduction += 10;
             videoAmount += 1;
-            videoCost *= 1.4;
+            videoCost *= 1.7;
         }
     }
 
@@ -292,7 +292,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalClassCost;
             motivationalClassProduction += 50;
             motivationalClassAmount += 1;
-            motivationalClassCost *= 1.5;
+            motivationalClassCost *= 1.8;
         }
     }
 
@@ -303,7 +303,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalSpeakingCost;
             motivationalSpeakingProduction += 100;
             motivationalSpeakingAmount += 1;
-            motivationalSpeakingCost *= 1.6;
+            motivationalSpeakingCost *= 1.9;
         }
     }
 
@@ -314,7 +314,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalSerumCost;
             motivationalSerumProduction += 200;
             motivationalSerumAmount += 1;
-            motivationalSerumCost *= 1.7;
+            motivationalSerumCost *= 2;
         }
     }
 
@@ -325,7 +325,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalBookCost;
             motivationalBookProduction += 250;
             motivationalBookAmount += 1;
-            motivationalBookCost *= 1.8;
+            motivationalBookCost *= 2.1;
         }
     }
     
@@ -336,7 +336,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalCultCost;
             motivationalCultProduction += 500;
             motivationalCultAmount += 1;
-            motivationalCultCost *= 1.9;
+            motivationalCultCost *= 2.2;
         }
     }
 
@@ -347,7 +347,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalTEDTalksCost;
             motivationalTEDTalksProduction += 1000;
             motivationalTEDTalksAmount += 1;
-            motivationalTEDTalksCost *= 2;
+            motivationalTEDTalksCost *= 2.3;
         }
     }
 
@@ -360,7 +360,7 @@ public class prototype4_script : MonoBehaviour
             upgradeBookProduction += 0.1;
             bookProduction *= upgradeBookProduction;
             upgradeBookAmount += 1;
-            upgradeBookCost *= 1.2;
+            upgradeBookCost *= 3.2;
         }
     }
 
@@ -372,7 +372,7 @@ public class prototype4_script : MonoBehaviour
             upgradePosterProduction += 0.2;
             posterProduction *= upgradePosterProduction;
             upgradePosterAmount += 1;
-            upgradePosterCost *= 1.3;
+            upgradePosterCost *= 3.3;
         }
     }
 
@@ -384,7 +384,7 @@ public class prototype4_script : MonoBehaviour
             upgradeVideoProduction += 0.3;
             videoProduction *= upgradeVideoProduction;
             upgradeVideoAmount += 1;
-            upgradeVideoCost *= 1.4;
+            upgradeVideoCost *= 3.4;
         }
     }
 
@@ -396,7 +396,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalClassProduction += 0.5;
             motivationalClassProduction *= upgradeMotivationalClassProduction;
             upgradeMotivationalClassAmount += 1;
-            upgradeMotivationalClassCost *= 1.5;
+            upgradeMotivationalClassCost *= 3.5;
         }
     }
 
@@ -408,7 +408,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalSpeakingProduction += 0.6;
             motivationalSpeakingProduction *= upgradeMotivationalSpeakingProduction;
             upgradeMotivationalSpeakingAmount += 1;
-            upgradeMotivationalSpeakingCost *= 1.6;
+            upgradeMotivationalSpeakingCost *= 3.6;
         }
     }
 
@@ -420,7 +420,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalSerumProduction += 0.7;
             motivationalSerumProduction *= upgradeMotivationalSerumProduction;
             upgradeMotivationalSerumAmount += 1;
-            upgradeMotivationalSerumCost *= 1.7;
+            upgradeMotivationalSerumCost *= 3.7;
         }
     }
 
@@ -432,7 +432,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalBookProduction += 0.8;
             motivationalBookProduction *= upgradeMotivationalBookProduction;
             upgradeMotivationalBookAmount += 1;
-            upgradeMotivationalBookCost *= 1.8;
+            upgradeMotivationalBookCost *= 3.8;
         }
     }
 
@@ -444,7 +444,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalCultProduction += 0.9;
             motivationalCultProduction *= upgradeMotivationalCultProduction;
             upgradeMotivationalCultAmount += 1;
-            upgradeMotivationalCultCost *= 1.9;
+            upgradeMotivationalCultCost *= 3.9;
         }
     }
 
@@ -456,7 +456,7 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalTEDTalksProduction += 1;
             motivationalTEDTalksProduction *= upgradeMotivationalTEDTalksProduction;
             upgradeMotivationalTEDTalksAmount += 1;
-            upgradeMotivationalTEDTalksCost *= 2;
+            upgradeMotivationalTEDTalksCost *= 4;
         }
     }
 }
