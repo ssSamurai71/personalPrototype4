@@ -190,6 +190,15 @@ public class prototype4_script : MonoBehaviour
     //function to calculate production
     void CalculateCurrency()
     {
+        bookProduction = bookProduction * upgradeBookProduction;
+        posterProduction = posterProduction * upgradePosterProduction;
+        videoProduction = videoProduction * upgradeVideoProduction;
+        motivationalBookProduction = motivationalBookProduction * upgradeMotivationalBookProduction;
+        motivationalClassProduction = motivationalClassProduction * upgradeMotivationalClassProduction;
+        motivationalSpeakingProduction = motivationalSpeakingProduction * upgradeMotivationalClassProduction;
+        motivationalSerumProduction = motivationalSerumProduction * upgradeMotivationalSerumProduction;
+        motivationalCultProduction = motivationalCultProduction * upgradeMotivationalCultProduction;
+        motivationalTEDTalksProduction = motivationalTEDTalksProduction * upgradeMotivationalTEDTalksProduction;
         currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
         currency += currencyPerSec * Time.deltaTime; //multiple by delta time
     }
@@ -245,7 +254,6 @@ public class prototype4_script : MonoBehaviour
         motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + motivationalTEDTalksProduction.ToString("F0") + "\nAmount: " + motivationalTEDTalksAmount.ToString("F0");
         upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + upgradeMotivationalTEDTalksCost.ToString("F0");
         upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + upgradeMotivationalTEDTalksProduction.ToString("F0") + "\nAmount: " + upgradeMotivationalTEDTalksAmount.ToString("F0");
-
     }
 
     public void ClickCurrency()
