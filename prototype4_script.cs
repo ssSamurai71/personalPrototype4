@@ -198,15 +198,15 @@ public class prototype4_script : MonoBehaviour
     void Update()
     {
         CalculateCurrency();
-        currencyText.text  = "Motivation: " + currency.ToString("F0");
-        currencyPerSecText.text = "Motivation/sec: " + currencyPerSec.ToString("F0");
+        currencyText.text  = "Motivation: " + currency.ToString();
+        currencyPerSecText.text = "Motivation/sec: " + currencyPerSec.ToString();
 
         bookText.text = "Book Cost:" + bookCost.ToString("F0");
-        bookToolTip.text = "Book production: " + bookProduction.ToString("F0") + "\nAmount: " + bookAmount.ToString("F0");
+        bookToolTip.text = "Book production: " + bookProduction.ToString() + "\nAmount: " + bookAmount.ToString("F0");
         upgradeBookText.text = "Upgrade Book \nCost: " + upgradeBookCost.ToString("F0");
         upgradeBookToolTip.text = "Boost: *" + upgradeBookProduction.ToString() + "\nAmount: " + upgradeBookAmount.ToString("F0");
 
-        posterText.text = "Poster Cost:" + posterCost.ToString("F0");
+        posterText.text = "Poster Cost:" + posterCost.ToString();
         posterToolTip.text = "Poster production: " + posterProduction.ToString("F0") + "\nAmount: " + posterAmount.ToString("F0");
         upgradePosterText.text = "Upgrade Poster \nCost:" + upgradePosterCost.ToString("F0");
         upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString() + "\nAmount: " + upgradePosterAmount.ToString("F0");
