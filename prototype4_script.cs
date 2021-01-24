@@ -255,6 +255,18 @@ public class prototype4_script : MonoBehaviour
         upgradeMotivationalTEDTalksCost = 6000;
         upgradeMotivationalTEDTalksProduction = 1;
         upgradeMotivationalTEDTalksAmount = 0;
+
+        load();
+    }
+
+    public void load()
+    {
+        
+    }
+
+    public void save()
+    {
+
     }
 
     //function to calculate production
@@ -285,10 +297,10 @@ public class prototype4_script : MonoBehaviour
         currencyText.text  = "Motivation: " + exponentConvert(currency);
         currencyPerSecText.text = "Motivation/sec: " + exponentConvert(currencyPerSec);
 
-        bookText.text = "Book Cost:" + bookCost.ToString("F0");
-        bookToolTip.text = "Book production: " + bookProduction.ToString() + "\nAmount: " + bookAmount.ToString("F0");
-        upgradeBookText.text = "Upgrade Book \nCost: " + upgradeBookCost.ToString("F0");
-        upgradeBookToolTip.text = "Boost: *" + upgradeBookProduction.ToString() + "\nAmount: " + upgradeBookAmount.ToString("F0");
+        bookText.text = "Book Cost:" + exponentConvert(bookCost);
+        bookToolTip.text = "Book production: " + exponentConvert(bookProduction) + "\nAmount: " + exponentConvert(bookAmount);
+        upgradeBookText.text = "Upgrade Book \nCost: " + exponentConvert(upgradeBookCost);
+        upgradeBookToolTip.text = "Boost: *" + exponentConvert(upgradeBookProduction) + "\nAmount: " + exponentConvert(upgradeBookAmount);
 
         posterText.text = "Poster Cost:" + posterCost.ToString();
         posterToolTip.text = "Poster production: " + posterProduction.ToString("F0") + "\nAmount: " + posterAmount.ToString("F0");
