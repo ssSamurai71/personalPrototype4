@@ -283,8 +283,8 @@ public class prototype4_script : MonoBehaviour
         if(amount > 1000)
         {
             double exponent = (System.Math.Floor(System.Math.Log10(System.Math.Abs(amount))));
-            double shrunkValue = (amount / System.Math.Pow(10, exponent));
-            return returnString = shrunkValue.ToString("F0") + "e" + exponent.ToString("F0");
+            double shrunkValue = System.Math.Floor(amount / System.Math.Pow(10, exponent));
+            return returnString = shrunkValue.ToString() + "e" + exponent.ToString("F0");
         }
         else
             return returnString = amount.ToString("F1");
@@ -302,45 +302,45 @@ public class prototype4_script : MonoBehaviour
         upgradeBookText.text = "Upgrade Book \nCost: " + exponentConvert(upgradeBookCost);
         upgradeBookToolTip.text = "Boost: *" + exponentConvert(upgradeBookProduction) + "\nAmount: " + exponentConvert(upgradeBookAmount);
 
-        posterText.text = "Poster Cost:" + posterCost.ToString();
-        posterToolTip.text = "Poster production: " + posterProduction.ToString("F0") + "\nAmount: " + posterAmount.ToString("F0");
-        upgradePosterText.text = "Upgrade Poster \nCost:" + upgradePosterCost.ToString("F0");
-        upgradePosterToolTip.text = "Boost: *" + upgradePosterProduction.ToString() + "\nAmount: " + upgradePosterAmount.ToString("F0");
+        posterText.text = "Poster Cost:" + exponentConvert(posterCost);
+        posterToolTip.text = "Poster production: " + exponentConvert(posterProduction) + "\nAmount: " + exponentConvert(posterAmount);
+        upgradePosterText.text = "Upgrade Poster \nCost:" + exponentConvert(upgradePosterCost);
+        upgradePosterToolTip.text = "Boost: *" + exponentConvert(upgradePosterProduction) + "\nAmount: " + exponentConvert(upgradePosterAmount);
 
-        videoText.text = "Video Cost:" + videoCost.ToString("F0");
-        videoToolTip.text = "Video production: " + videoProduction.ToString("F0") + "\nAmount: " + videoAmount.ToString("F0");
-        upgradeVideoText.text = "Upgrade Video \nCost:" + upgradeVideoCost.ToString("F0");
-        upgradeVideoToolTip.text = "Boost: *" + upgradeVideoProduction.ToString() + "\nAmount: "+ upgradeVideoAmount.ToString("F0");
+        videoText.text = "Video Cost:" + exponentConvert(videoCost);
+        videoToolTip.text = "Video production: " + exponentConvert(videoProduction) + "\nAmount: " + exponentConvert(videoAmount);
+        upgradeVideoText.text = "Upgrade Video \nCost:" + exponentConvert(upgradeVideoCost);
+        upgradeVideoToolTip.text = "Boost: *" + exponentConvert(upgradeVideoProduction) + "\nAmount: "+ exponentConvert(upgradeVideoAmount);
 
-        motivationalClassText.text = "Motivational Class Cost:" + motivationalClassCost.ToString("F0");
-        motivationalClassToolTip.text = "Motivational Class production: " + motivationalClassProduction.ToString("F0") + "\nAmount: " + motivationalClassAmount.ToString("F0");
-        upgradeMotivationalClassText.text = "Upgrade Motivational Class \nCost:" + upgradeMotivationalClassCost.ToString("F0"); 
-        upgradeMotivationalClassToolTip.text = "Boost: *" + upgradeMotivationalClassProduction.ToString() + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
+        motivationalClassText.text = "Motivational Class Cost:" + exponentConvert(motivationalClassCost);
+        motivationalClassToolTip.text = "Motivational Class production: " + exponentConvert(motivationalClassProduction) + "\nAmount: " + exponentConvert(motivationalClassAmount);
+        upgradeMotivationalClassText.text = "Upgrade Motivational Class \nCost:" + exponentConvert(upgradeMotivationalClassCost); 
+        upgradeMotivationalClassToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalClassProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalClassAmount);
 
-        motivationalSpeakingText.text = "Motivational Speaking Cost:" + motivationalSpeakingCost.ToString("F0");
-        motivationalSpeakingToolTip.text = "Motivational Speaking production: " + motivationalSpeakingProduction.ToString("F0") + "\nAmount: " + motivationalSpeakingAmount.ToString("F0");
-        upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + upgradeMotivationalSpeakingCost.ToString("F0");
-        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + upgradeMotivationalSpeakingProduction.ToString() + "\nAmount: " + upgradeMotivationalSpeakingAmount.ToString("F0");
+        motivationalSpeakingText.text = "Motivational Speaking Cost:" + exponentConvert(motivationalSpeakingCost);
+        motivationalSpeakingToolTip.text = "Motivational Speaking production: " + exponentConvert(motivationalSpeakingProduction) + "\nAmount: " + exponentConvert(motivationalSpeakingAmount);
+        upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + exponentConvert(upgradeMotivationalSpeakingCost);
+        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalSpeakingProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalSpeakingAmount);
 
-        motivationalSerumText.text = "Motivational Serum Cost:" + motivationalSerumCost.ToString("F0");
-        motivationalSerumToolTip.text = "Motivational Serum production: " + motivationalSerumProduction.ToString("F0") + "\nAmount: " + motivationalSerumAmount.ToString("F0");
-        upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + upgradeMotivationalSerumCost.ToString("F0");
-        upgradeMotivationalSerumToolTip.text = "Boost: *" + upgradeMotivationalSerumProduction.ToString() + "\nAmount: " + upgradeMotivationalSerumAmount.ToString("F0");
+        motivationalSerumText.text = "Motivational Serum Cost:" + exponentConvert(motivationalSerumCost);
+        motivationalSerumToolTip.text = "Motivational Serum production: " + exponentConvert(motivationalSerumProduction) + "\nAmount: " + exponentConvert(motivationalSerumAmount);
+        upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + exponentConvert(upgradeMotivationalSerumCost);
+        upgradeMotivationalSerumToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalSerumProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalSerumAmount);
 
-        motivationalBookText.text = "Motivational Book Cost:" + motivationalBookCost.ToString("F0");
-        motivationalBookToolTip.text = "Motivational Book production: " + motivationalBookProduction.ToString("F0") + "\nAmount: " + motivationalBookAmount.ToString("F0");
-        upgradeMotivationalBookText.text = "Upgrade Motivational Book \nCost:" + upgradeMotivationalBookCost.ToString("F0");
-        upgradeMotivationalBookToolTip.text = "Boost: *" + upgradeMotivationalBookProduction.ToString("") + "\nAMount: " + upgradeMotivationalBookAmount.ToString("F0");
+        motivationalBookText.text = "Motivational Book Cost:" + exponentConvert(motivationalBookCost);
+        motivationalBookToolTip.text = "Motivational Book production: " + exponentConvert(motivationalBookProduction) + "\nAmount: " + exponentConvert(motivationalBookAmount);
+        upgradeMotivationalBookText.text = "Upgrade Motivational Book \nCost:" + exponentConvert(upgradeMotivationalBookCost);
+        upgradeMotivationalBookToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalBookProduction) + "\nAMount: " + exponentConvert(upgradeMotivationalBookAmount);
  
-        motivationalCultText.text = "Motivational Cult Cost:" + motivationalCultCost.ToString("F0");
-        motivationalCultToolTip.text = "Motivational Cult production: " + motivationalCultProduction.ToString("F0") + "\nAmount: " + motivationalCultAmount.ToString("F0");
-        upgradeMotivationalCultText.text = "Upgrade Motivational Cult \nCost:" + upgradeMotivationalCultCost.ToString("F0");
-        upgradeMotivationalCultToolTip.text = "Boost: *" + upgradeMotivationalCultProduction.ToString("") + "\nAmount: " + upgradeMotivationalClassAmount.ToString("F0");
+        motivationalCultText.text = "Motivational Cult Cost:" + exponentConvert(motivationalCultCost);
+        motivationalCultToolTip.text = "Motivational Cult production: " + exponentConvert(motivationalCultProduction) + "\nAmount: " + exponentConvert(motivationalCultAmount);
+        upgradeMotivationalCultText.text = "Upgrade Motivational Cult \nCost:" + exponentConvert(upgradeMotivationalCultCost);
+        upgradeMotivationalCultToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalCultProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalClassAmount);
 
-        motivationalTEDTalksText.text = "Motivational TED Talks Cost:" + motivationalTEDTalksCost.ToString("F0");
-        motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + motivationalTEDTalksProduction.ToString("F0") + "\nAmount: " + motivationalTEDTalksAmount.ToString("F0");
-        upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + upgradeMotivationalTEDTalksCost.ToString("F0");
-        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + upgradeMotivationalTEDTalksProduction.ToString("") + "\nAmount: " + upgradeMotivationalTEDTalksAmount.ToString("F0");
+        motivationalTEDTalksText.text = "Motivational TED Talks Cost:" + exponentConvert(motivationalTEDTalksCost);
+        motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + exponentConvert(motivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(motivationalTEDTalksAmount);
+        upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + exponentConvert(upgradeMotivationalTEDTalksCost);
+        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalTEDTalksAmount);
     }
 
     public void ClickCurrency()
