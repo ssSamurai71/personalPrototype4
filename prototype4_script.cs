@@ -117,6 +117,7 @@ public class prototype4_script : MonoBehaviour
         Application.Quit();
     }
 
+    //have FULL HARD RESET
     public void reset()
     {
         currency = 0;
@@ -263,12 +264,26 @@ public class prototype4_script : MonoBehaviour
         currency += currencyPerSec * Time.deltaTime; //multiple by delta time
     }
 
+    
+    string exponentConvert(double amount)
+    {   
+        string returnString;
+        if(amount > 1000)
+        {
+            double exponent = (System.Math.Floor(System.Math.Log10(System.Math.Abs(amount))));
+            double shrunkValue = (amount / System.Math.Pow(10, exponent));
+            return returnString = shrunkValue.ToString("F0") + "e" + exponent.ToString("F0");
+        }
+        else
+            return returnString = amount.ToString("F1");
+    }
+
     // Update is called once per frame
     void Update()
     {
         CalculateCurrency();
-        currencyText.text  = "Motivation: " + currency.ToString();
-        currencyPerSecText.text = "Motivation/sec: " + currencyPerSec.ToString();
+        currencyText.text  = "Motivation: " + exponentConvert(currency);
+        currencyPerSecText.text = "Motivation/sec: " + exponentConvert(currencyPerSec);
 
         bookText.text = "Book Cost:" + bookCost.ToString("F0");
         bookToolTip.text = "Book production: " + bookProduction.ToString() + "\nAmount: " + bookAmount.ToString("F0");
