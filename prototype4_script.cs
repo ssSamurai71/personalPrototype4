@@ -112,6 +112,8 @@ public class prototype4_script : MonoBehaviour
     public double upgradeMotivationalTEDTalksProduction;
     public double upgradeMotivationalTEDTalksAmount;
 
+    float autoSaveTimer = 30;
+
     public void CloseApplication()
     {
         Application.Quit();
@@ -189,31 +191,7 @@ public class prototype4_script : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        currency = 0;
-        currencyPerClickValue = 1;
-        
-        bookCost = 10;
-        bookProduction = 0;
-        bookAmount = 0;
-        upgradeBookCost = 50;
-        upgradeBookProduction = 1;
-        upgradeBookAmount = 0;
-
-        posterCost = 50;
-        posterProduction = 0;
-        posterAmount = 0;
-        upgradePosterCost = 100;
-        upgradePosterProduction = 1;
-        upgradePosterAmount = 0;
-    
-        videoCost = 100;
-        videoProduction = 0;
-        videoAmount = 0;
-        upgradeVideoCost = 200;
-        upgradeVideoProduction = 1;
-        upgradeVideoAmount = 0;
-        
+    {      
         motivationalClassCost = 500;
         motivationalClassProduction = 0;
         motivationalClassAmount = 0;
@@ -262,11 +240,77 @@ public class prototype4_script : MonoBehaviour
     public void load()
     {
         
+        currency = double.Parse(PlayerPrefs.GetString("currency", "0"));
+        currencyPerClickValue = double.Parse(PlayerPrefs.GetString("currencyPerClickValue", "1"));
+        
+        bookCost = double.Parse(PlayerPrefs.GetString("bookCost", "10"));
+        bookProduction = double.Parse(PlayerPrefs.GetString("bookProduction", "0"));
+        bookAmount = double.Parse(PlayerPrefs.GetString("bookAmount", "0"));
+        upgradeBookCost = double.Parse(PlayerPrefs.GetString("upgradeBookCost", "50"));
+        upgradeBookProduction = double.Parse(PlayerPrefs.GetString("upgradeBooKProduction", "1"));
+        upgradeBookAmount = double.Parse(PlayerPrefs.GetString("UpgradeBookAmount", "0"));
+
+        posterCost = double.Parse(PlayerPrefs.GetString("posterCost", "50"));
+        posterProduction = double.Parse(PlayerPrefs.GetString("posterProduction", "0"));
+        posterAmount = double.Parse(PlayerPrefs.GetString("posterAmount", "0"));
+        upgradePosterCost = double.Parse(PlayerPrefs.GetString("upgradePosterCost", "100"));
+        upgradePosterProduction = double.Parse(PlayerPrefs.GetString("upgradePosterProduction", "1"));
+        upgradePosterAmount = double.Parse(PlayerPrefs.GetString("upgradePosterAmount", "0"));
+
+        videoCost = double.Parse(PlayerPrefs.GetString("videoCost", "100"));
+        videoProduction = double.Parse(PlayerPrefs.GetString("videoProduction", "0"));
+        videoAmount = double.Parse(PlayerPrefs.GetString("videoAmount", "0"));
+        upgradeVideoCost = double.Parse(PlayerPrefs.GetString("upgradeVideoCost", "200"));
+        upgradeVideoProduction = double.Parse(PlayerPrefs.GetString("upgradeVideoProduction", "1"));
+        upgradeVideoAmount = double.Parse(PlayerPrefs.GetString("upgradeVideoAmount", "0"));
+        
+        //double.Parse(PlayerPrefs.GetString())
+        motivationalClassCost = double.Parse(PlayerPrefs.GetString("motivationalClassCost", "500");
+        motivationalClassProduction = double.Parse(PlayerPrefs.GetString("motivationalClassProduction", "0");
+        motivationalClassAmount = double.Parse(PlayerPrefs.GetString("motivationalClassAmount", "0");
+        upgradeMotivationalClassCost = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassCost", "1000");
+        upgradeMotivationalClassProduction = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassProduction", "1");
+        upgradeMotivationalClassAmount = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassAmount", "0");
+
     }
 
     public void save()
     {
+       
+        PlayerPrefs.SetString("currency", currency.ToString());
+        PlayerPrefs.SetString("currencyPerClickValue", currencyPerClickValue.ToString());
+        
+        PlayerPrefs.SetString("bookCost", bookCost.ToString());
+        PlayerPrefs.SetString("bookProduction", bookProduction.ToString());
+        PlayerPrefs.SetString("bookAmount", bookAmount.ToString());
+        PlayerPrefs.SetString("upgradeBookCost", upgradeBookCost.ToString());
+        PlayerPrefs.SetString("upgradeBookProduction", upgradeBookProduction.ToString());
+        PlayerPrefs.SetString("upgradeBookAmount", upgradeBookAmount.ToString());
 
+        PlayerPrefs.SetString("posterCost", posterCost.ToString());
+        PlayerPrefs.SetString("posterProduction", posterProduction.ToString());
+        PlayerPrefs.SetString("posterAmount", posterAmount.ToString());
+        PlayerPrefs.SetString("upgradePosterCost", upgradePosterCost.ToString());
+        PlayerPrefs.SetString("upgradePosterProduction", upgradePosterProduction.ToString());
+        PlayerPrefs.SetString("upgradePosterAmount", upgradePosterAmount.ToString());
+
+
+        PlayerPrefs.SetString("videoCost", videoCost.ToString());
+        PlayerPrefs.SetString("videoProduction", videoProduction.ToString());
+        PlayerPrefs.SetString("videoAmount", videoAmount.ToString());
+        PlayerPrefs.SetString("upgradeVideoCost", upgradeVideoCost.ToString());
+        PlayerPrefs.SetString("upgradeVideoProduction", upgradeVideoProduction.ToString());
+        PlayerPrefs.SetString("upgradeVideoAmount", upgradeVideoAmount.ToString());
+        
+        //PlayerPrefs.SetString("", );
+        PlayerPrefs.SetString("motivationalClassCost", motivationalClassCost.ToString());
+        PlayerPrefs.SetString("motivationalClassProduction", motivationalClassProduction.ToString());
+        PlayerPrefs.SetString("motivationalClassAmount", motivationalClassAmount.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalClassCost", upgradeMotivationalClassCost.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalClassProduction", upgradeMotivationalClassProduction.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalClassAmount ", upgradeMotivationalClassAmount.ToString());       
+
+       
     }
 
     //function to calculate production
@@ -276,7 +320,16 @@ public class prototype4_script : MonoBehaviour
         currency += currencyPerSec * Time.deltaTime; //multiple by delta time
     }
 
-    
+    void autoSave()
+    {
+        if(autoSaveTimer < 0)
+        {
+            save();
+            autoSaveTimer = 30;
+        }
+        autoSaveTimer = autoSaveTimer - Time.deltaTime;
+    }
+
     string exponentConvert(double amount)
     {   
         string returnString;
@@ -341,6 +394,8 @@ public class prototype4_script : MonoBehaviour
         motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + exponentConvert(motivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(motivationalTEDTalksAmount);
         upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + exponentConvert(upgradeMotivationalTEDTalksCost);
         upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalTEDTalksAmount);
+
+        autoSave();
     }
 
     public void ClickCurrency()
