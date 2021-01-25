@@ -283,8 +283,8 @@ public class prototype4_script : MonoBehaviour
         if(amount > 1000)
         {
             double exponent = (System.Math.Floor(System.Math.Log10(System.Math.Abs(amount))));
-            double shrunkValue = System.Math.Floor(amount / System.Math.Pow(10, exponent));
-            return returnString = shrunkValue.ToString() + "e" + exponent.ToString("F0");
+            double shrunkValue = (amount / System.Math.Pow(10, exponent));
+            return returnString = shrunkValue.ToString("F2") + "e" + exponent.ToString();
         }
         else
             return returnString = amount.ToString("F1");
