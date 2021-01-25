@@ -221,12 +221,12 @@ public class prototype4_script : MonoBehaviour
         upgradeVideoProduction = double.Parse(PlayerPrefs.GetString("upgradeVideoProduction", "1"));
         upgradeVideoAmount = double.Parse(PlayerPrefs.GetString("upgradeVideoAmount", "0"));
         
-        motivationalClassCost = double.Parse(PlayerPrefs.GetString("motivationalClassCost", "500");
-        motivationalClassProduction = double.Parse(PlayerPrefs.GetString("motivationalClassProduction", "0");
-        motivationalClassAmount = double.Parse(PlayerPrefs.GetString("motivationalClassAmount", "0");
-        upgradeMotivationalClassCost = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassCost", "1000");
-        upgradeMotivationalClassProduction = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassProduction", "1");
-        upgradeMotivationalClassAmount = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassAmount", "0");
+        motivationalClassCost = double.Parse(PlayerPrefs.GetString("motivationalClassCost", "500"));
+        motivationalClassProduction = double.Parse(PlayerPrefs.GetString("motivationalClassProduction", "0"));
+        motivationalClassAmount = double.Parse(PlayerPrefs.GetString("motivationalClassAmount", "0"));
+        upgradeMotivationalClassCost = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassCost", "1000"));
+        upgradeMotivationalClassProduction = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassProduction", "1"));
+        upgradeMotivationalClassAmount = double.Parse(PlayerPrefs.GetString("upgradeMotivationalClassAmount", "0"));
 
         motivationalSpeakingCost = double.Parse(PlayerPrefs.GetString("motivationalSpeakingCost", "1000"));
         motivationalSpeakingProduction = double.Parse(PlayerPrefs.GetString("motivationalSpeakingProduction", "0"));
@@ -301,7 +301,7 @@ public class prototype4_script : MonoBehaviour
         PlayerPrefs.SetString("upgradeMotivationalClassAmount ", upgradeMotivationalClassAmount.ToString());
 
         PlayerPrefs.SetString("motivationalSpeakingCost", motivationalSpeakingCost.ToString());
-        PlayerPrefs.SetString("motivationalSpeakingProduction", motivationalSpeakingProductio.ToString());
+        PlayerPrefs.SetString("motivationalSpeakingProduction", motivationalSpeakingProduction.ToString());
         PlayerPrefs.SetString("motivationalSpeakingAmount", motivationalSpeakingAmount.ToString());
         PlayerPrefs.SetString("upgradeMotivationalSpeakingCost", upgradeMotivationalSpeakingCost.ToString());
         PlayerPrefs.SetString("upgradeMotivationalSpeakingProduction", upgradeMotivationalSpeakingProduction.ToString());
@@ -309,17 +309,17 @@ public class prototype4_script : MonoBehaviour
 
         PlayerPrefs.SetString("motivationalSerumCost", motivationalSerumCost.ToString());
         PlayerPrefs.SetString("motivationalSerumProduction", motivationalSerumProduction.ToString());
-        PlayerPrefs.SetString("motivationalSerumAmount", motivationalSerumAmount.ToString);
+        PlayerPrefs.SetString("motivationalSerumAmount", motivationalSerumAmount.ToString());
         PlayerPrefs.SetString("upgradeMotivationalSerumCost", upgradeMotivationalSerumCost.ToString());
         PlayerPrefs.SetString("upgradeMotivationalSerumProduction", upgradeMotivationalSerumProduction.ToString());
         PlayerPrefs.SetString("upgradeMotivationalSerumAmount", upgradeMotivationalSerumAmount.ToString());
 
-        PlayerPrefs.SetString("motivationalBookCost", motivationalBookCost.ToString())
-        PlayerPrefs.SetString("motivationalBookProduction", motivationalBookProduction.ToString())
-        PlayerPrefs.SetString("motivationalBookAmount", motivationalBookAmount.ToString())
-        PlayerPrefs.SetString("upgradeMotivationalBookCost", upgradeMotivationalBookCost.ToString())
-        PlayerPrefs.SetString("upgradeMotivationalBookProduction", upgradeMotivationalBookProduction.ToString())
-        PlayerPrefs.SetString("upgradeMotivationalBookAmount", upgradeMotivationalBookAmount.ToString())
+        PlayerPrefs.SetString("motivationalBookCost", motivationalBookCost.ToString());
+        PlayerPrefs.SetString("motivationalBookProduction", motivationalBookProduction.ToString());
+        PlayerPrefs.SetString("motivationalBookAmount", motivationalBookAmount.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalBookCost", upgradeMotivationalBookCost.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalBookProduction", upgradeMotivationalBookProduction.ToString());
+        PlayerPrefs.SetString("upgradeMotivationalBookAmount", upgradeMotivationalBookAmount.ToString());
 
         PlayerPrefs.SetString("motivationalCultCost", motivationalCultCost.ToString());
         PlayerPrefs.SetString("motivationalCultProduction",motivationalCultProduction.ToString());
