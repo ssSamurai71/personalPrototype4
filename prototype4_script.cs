@@ -202,10 +202,10 @@ public class prototype4_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {      
-        load();
+        Load();
     }
 
-    public void load()
+    public void Load()
     {
         currency = double.Parse(PlayerPrefs.GetString("currency", "0"));
         currencyPerClickValue = double.Parse(PlayerPrefs.GetString("currencyPerClickValue", "1"));
@@ -273,10 +273,16 @@ public class prototype4_script : MonoBehaviour
         upgradeMotivationalTEDTalksProduction = double.Parse(PlayerPrefs.GetString("upgradeMotivationalTEDTalksProduction", "1"));
         upgradeMotivationalTEDTalksAmount = double.Parse(PlayerPrefs.GetString("upgradeMotivationalTEDTalksAmount", "0"));
 
+        crystalizedMotivationOnNGPlus = double.Parse(PlayerPrefs.GetString("crystalizedMotivationOnNGPlus", "0"));
+        crystalizedMotivationBoostOnNGPlus = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoostOnNGPlus", "0"));
+        crystalizedMotivation = double.Parse(PlayerPrefs.GetString("crystalizedMotivation", "0"));
+        crystalizedMotivationBoost = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoost", "0"));
+        runCurrency = double.Parse(PlayerPrefs.GetString("runCurrency", "0"));
+
         //double.Parse(PlayerPrefs.GetString(""))
     }
 
-    public void save()
+    public void Save()
     {
        
         PlayerPrefs.SetString("currency", currency.ToString());
@@ -345,6 +351,12 @@ public class prototype4_script : MonoBehaviour
         PlayerPrefs.SetString("upgradeMotivationalTEDTalksProduction", upgradeMotivationalTEDTalksProduction.ToString());
         PlayerPrefs.SetString("upgradeMotivationalTEDTalksAmount", upgradeMotivationalTEDTalksAmount.ToString());
    
+        PlayerPrefs.SetString("crystalizedMotivationOnNGPlus", crystalizedMotivationOnNGPlus.ToString());
+        PlayerPrefs.SetString("crystalizedMotivationBoostOnNGPlus", crystalizedMotivationBoostOnNGPlus.ToString());
+        PlayerPrefs.SetString("crystalizedMotivationBoost", crystalizedMotivationBoost.ToString());
+        PlayerPrefs.SetString("crystalizedMotivation", crystalizedMotivation.ToString());
+        PlayerPrefs.SetString("runCurrency", runCurrency.ToString());
+
         //PlayerPrefs.SetString();
     }
 
@@ -356,11 +368,11 @@ public class prototype4_script : MonoBehaviour
         runCurrency += currencyPerSec * Time.deltaTime;
     }
 
-    void autoSave()
+    void AutoSave()
     {
         if(autoSaveTimer < 0)
         {
-            save();
+            Save();
             autoSaveTimer = 30;
         }
         autoSaveTimer = autoSaveTimer - Time.deltaTime;
@@ -380,17 +392,17 @@ public class prototype4_script : MonoBehaviour
     }
 
     //need to finish this function
-    void calcNGPlusCrystals()
+    public void calcNGPlusCrystals()
     {
-        crystalizedMotivationOnNGPlus = Math.Cbrt(Math.Cbrt(runCurrency / 1e10));
+        crystalizedMotivationOnNGPlus = System.Math.Sqrt(System.Math.Sqrt(runCurrency / 1e10));
         crystalizedMotivationBoostOnNGPlus = crystalizedMotivationOnNGPlus/1e4;
-        crystalizedMotivationOnNGPlusText.text = "Next Run \nCrystalized Motivation: " + exponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + exponentConvert(crystalizedMotivationBoostOnNGPlus);
+        crystalizedMotivationOnNGPlusText.text = "Next Run \nCrystalized Motivation: " + ExponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoostOnNGPlus);
 
-        crystalizedMotivationText.text = "Crystalized Motivation: " + exponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + exponentConvert(crystalizedMotivationBoostOnNGPlus);
+        crystalizedMotivationText.text = "Crystalized Motivation: " + ExponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoostOnNGPlus);
     
     }
 
-    void NewGamePLus()
+    public void NewGamePLus()
     {
         if(runCurrency > 1e10)
         {
@@ -473,55 +485,57 @@ public class prototype4_script : MonoBehaviour
     void Update()
     {
         CalculateCurrency();
-        currencyText.text  = "Motivation: " + exponentConvert(currency);
-        currencyPerSecText.text = "Motivation/sec: " + exponentConvert(currencyPerSec);
+        currencyText.text  = "Motivation: " + ExponentConvert(currency);
+        currencyPerSecText.text = "Motivation/sec: " + ExponentConvert(currencyPerSec);
 
-        bookText.text = "Book Cost:" + exponentConvert(bookCost);
-        bookToolTip.text = "Book production: " + exponentConvert(bookProduction) + "\nAmount: " + exponentConvert(bookAmount);
-        upgradeBookText.text = "Upgrade Book \nCost: " + exponentConvert(upgradeBookCost);
-        upgradeBookToolTip.text = "Boost: *" + exponentConvert(upgradeBookProduction) + "\nAmount: " + exponentConvert(upgradeBookAmount);
+        bookText.text = "Book Cost:" + ExponentConvert(bookCost);
+        bookToolTip.text = "Book production: " + ExponentConvert(bookProduction) + "\nAmount: " + ExponentConvert(bookAmount);
+        upgradeBookText.text = "Upgrade Book \nCost: " + ExponentConvert(upgradeBookCost);
+        upgradeBookToolTip.text = "Boost: *" + ExponentConvert(upgradeBookProduction) + "\nAmount: " + ExponentConvert(upgradeBookAmount);
 
-        posterText.text = "Poster Cost:" + exponentConvert(posterCost);
-        posterToolTip.text = "Poster production: " + exponentConvert(posterProduction) + "\nAmount: " + exponentConvert(posterAmount);
-        upgradePosterText.text = "Upgrade Poster \nCost:" + exponentConvert(upgradePosterCost);
-        upgradePosterToolTip.text = "Boost: *" + exponentConvert(upgradePosterProduction) + "\nAmount: " + exponentConvert(upgradePosterAmount);
+        posterText.text = "Poster Cost:" + ExponentConvert(posterCost);
+        posterToolTip.text = "Poster production: " + ExponentConvert(posterProduction) + "\nAmount: " + ExponentConvert(posterAmount);
+        upgradePosterText.text = "Upgrade Poster \nCost:" + ExponentConvert(upgradePosterCost);
+        upgradePosterToolTip.text = "Boost: *" + ExponentConvert(upgradePosterProduction) + "\nAmount: " + ExponentConvert(upgradePosterAmount);
 
-        videoText.text = "Video Cost:" + exponentConvert(videoCost);
-        videoToolTip.text = "Video production: " + exponentConvert(videoProduction) + "\nAmount: " + exponentConvert(videoAmount);
-        upgradeVideoText.text = "Upgrade Video \nCost:" + exponentConvert(upgradeVideoCost);
-        upgradeVideoToolTip.text = "Boost: *" + exponentConvert(upgradeVideoProduction) + "\nAmount: "+ exponentConvert(upgradeVideoAmount);
+        videoText.text = "Video Cost:" + ExponentConvert(videoCost);
+        videoToolTip.text = "Video production: " + ExponentConvert(videoProduction) + "\nAmount: " + ExponentConvert(videoAmount);
+        upgradeVideoText.text = "Upgrade Video \nCost:" + ExponentConvert(upgradeVideoCost);
+        upgradeVideoToolTip.text = "Boost: *" + ExponentConvert(upgradeVideoProduction) + "\nAmount: "+ ExponentConvert(upgradeVideoAmount);
 
-        motivationalClassText.text = "Motivational Class Cost:" + exponentConvert(motivationalClassCost);
-        motivationalClassToolTip.text = "Motivational Class production: " + exponentConvert(motivationalClassProduction) + "\nAmount: " + exponentConvert(motivationalClassAmount);
-        upgradeMotivationalClassText.text = "Upgrade Motivational Class \nCost:" + exponentConvert(upgradeMotivationalClassCost); 
-        upgradeMotivationalClassToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalClassProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalClassAmount);
+        motivationalClassText.text = "Motivational Class Cost:" + ExponentConvert(motivationalClassCost);
+        motivationalClassToolTip.text = "Motivational Class production: " + ExponentConvert(motivationalClassProduction) + "\nAmount: " + ExponentConvert(motivationalClassAmount);
+        upgradeMotivationalClassText.text = "Upgrade Motivational Class \nCost:" + ExponentConvert(upgradeMotivationalClassCost); 
+        upgradeMotivationalClassToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalClassProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalClassAmount);
 
-        motivationalSpeakingText.text = "Motivational Speaking Cost:" + exponentConvert(motivationalSpeakingCost);
-        motivationalSpeakingToolTip.text = "Motivational Speaking production: " + exponentConvert(motivationalSpeakingProduction) + "\nAmount: " + exponentConvert(motivationalSpeakingAmount);
-        upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + exponentConvert(upgradeMotivationalSpeakingCost);
-        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalSpeakingProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalSpeakingAmount);
+        motivationalSpeakingText.text = "Motivational Speaking Cost:" + ExponentConvert(motivationalSpeakingCost);
+        motivationalSpeakingToolTip.text = "Motivational Speaking production: " + ExponentConvert(motivationalSpeakingProduction) + "\nAmount: " + ExponentConvert(motivationalSpeakingAmount);
+        upgradeMotivationalSpeakingText.text = "Upgrade Motivational Speaking \nCost:" + ExponentConvert(upgradeMotivationalSpeakingCost);
+        upgradeMotivationalSpeakingToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalSpeakingProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalSpeakingAmount);
 
-        motivationalSerumText.text = "Motivational Serum Cost:" + exponentConvert(motivationalSerumCost);
-        motivationalSerumToolTip.text = "Motivational Serum production: " + exponentConvert(motivationalSerumProduction) + "\nAmount: " + exponentConvert(motivationalSerumAmount);
-        upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + exponentConvert(upgradeMotivationalSerumCost);
-        upgradeMotivationalSerumToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalSerumProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalSerumAmount);
+        motivationalSerumText.text = "Motivational Serum Cost:" + ExponentConvert(motivationalSerumCost);
+        motivationalSerumToolTip.text = "Motivational Serum production: " + ExponentConvert(motivationalSerumProduction) + "\nAmount: " + ExponentConvert(motivationalSerumAmount);
+        upgradeMotivationalSerumText.text = "Upgrade Motivational Serum \nCost: " + ExponentConvert(upgradeMotivationalSerumCost);
+        upgradeMotivationalSerumToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalSerumProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalSerumAmount);
 
-        motivationalBookText.text = "Motivational Book Cost:" + exponentConvert(motivationalBookCost);
-        motivationalBookToolTip.text = "Motivational Book production: " + exponentConvert(motivationalBookProduction) + "\nAmount: " + exponentConvert(motivationalBookAmount);
-        upgradeMotivationalBookText.text = "Upgrade Motivational Book \nCost:" + exponentConvert(upgradeMotivationalBookCost);
-        upgradeMotivationalBookToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalBookProduction) + "\nAMount: " + exponentConvert(upgradeMotivationalBookAmount);
+        motivationalBookText.text = "Motivational Book Cost:" + ExponentConvert(motivationalBookCost);
+        motivationalBookToolTip.text = "Motivational Book production: " + ExponentConvert(motivationalBookProduction) + "\nAmount: " + ExponentConvert(motivationalBookAmount);
+        upgradeMotivationalBookText.text = "Upgrade Motivational Book \nCost:" + ExponentConvert(upgradeMotivationalBookCost);
+        upgradeMotivationalBookToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalBookProduction) + "\nAMount: " + ExponentConvert(upgradeMotivationalBookAmount);
  
-        motivationalCultText.text = "Motivational Cult Cost:" + exponentConvert(motivationalCultCost);
-        motivationalCultToolTip.text = "Motivational Cult production: " + exponentConvert(motivationalCultProduction) + "\nAmount: " + exponentConvert(motivationalCultAmount);
-        upgradeMotivationalCultText.text = "Upgrade Motivational Cult \nCost:" + exponentConvert(upgradeMotivationalCultCost);
-        upgradeMotivationalCultToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalCultProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalClassAmount);
+        motivationalCultText.text = "Motivational Cult Cost:" + ExponentConvert(motivationalCultCost);
+        motivationalCultToolTip.text = "Motivational Cult production: " + ExponentConvert(motivationalCultProduction) + "\nAmount: " + ExponentConvert(motivationalCultAmount);
+        upgradeMotivationalCultText.text = "Upgrade Motivational Cult \nCost:" + ExponentConvert(upgradeMotivationalCultCost);
+        upgradeMotivationalCultToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalCultProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalClassAmount);
 
-        motivationalTEDTalksText.text = "Motivational TED Talks Cost:" + exponentConvert(motivationalTEDTalksCost);
-        motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + exponentConvert(motivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(motivationalTEDTalksAmount);
-        upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + exponentConvert(upgradeMotivationalTEDTalksCost);
-        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + exponentConvert(upgradeMotivationalTEDTalksProduction) + "\nAmount: " + exponentConvert(upgradeMotivationalTEDTalksAmount);
+        motivationalTEDTalksText.text = "Motivational TED Talks Cost:" + ExponentConvert(motivationalTEDTalksCost);
+        motivationalTEDTalksToolTip.text = "Motivational TED Talks production: " + ExponentConvert(motivationalTEDTalksProduction) + "\nAmount: " + ExponentConvert(motivationalTEDTalksAmount);
+        upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + ExponentConvert(upgradeMotivationalTEDTalksCost);
+        upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalTEDTalksProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalTEDTalksAmount);
 
-        autoSave();
+        calcNGPlusCrystals()
+
+        AutoSave();
     }
 
     public void ClickCurrency()
