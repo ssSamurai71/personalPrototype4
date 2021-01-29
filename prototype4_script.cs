@@ -134,7 +134,7 @@ public class prototype4_script : MonoBehaviour
     {
 
         NGCount = 0;
-        crystalizedMotivationBoost = 0;
+        crystalizedMotivationBoost = 1;
         crystalizedMotivation = 0;
 
         crystalizedMotivationOnNGPlus = 0;
@@ -285,7 +285,7 @@ public class prototype4_script : MonoBehaviour
         crystalizedMotivationOnNGPlus = double.Parse(PlayerPrefs.GetString("crystalizedMotivationOnNGPlus", "0"));
         crystalizedMotivationBoostOnNGPlus = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoostOnNGPlus", "0"));
         crystalizedMotivation = double.Parse(PlayerPrefs.GetString("crystalizedMotivation", "0"));
-        crystalizedMotivationBoost = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoost", "0"));
+        crystalizedMotivationBoost = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoost", "1"));
         runCurrency = double.Parse(PlayerPrefs.GetString("runCurrency", "0"));
         NGCount = double.Parse(PlayerPrefs.GetString("NGCount", "0"));
         //double.Parse(PlayerPrefs.GetString(""))
@@ -397,7 +397,7 @@ public class prototype4_script : MonoBehaviour
     public void calcNGPlusCrystals()
     {
         crystalizedMotivationOnNGPlus = System.Math.Sqrt(System.Math.Sqrt(runCurrency / 1e10));
-        crystalizedMotivationBoostOnNGPlus = (crystalizedMotivationOnNGPlus/1e4) + 1;
+        crystalizedMotivationBoostOnNGPlus = (crystalizedMotivationOnNGPlus/1e4);
         crystalizedMotivationOnNGPlusText.text = "Next Run \nCrystalized Motivation: " + ExponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoostOnNGPlus);
 
         crystalizedMotivationText.text = "Crystalized Motivation: " + ExponentConvert(crystalizedMotivation) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoost);
