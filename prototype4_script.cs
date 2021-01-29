@@ -132,78 +132,80 @@ public class prototype4_script : MonoBehaviour
     //have FULL HARD RESET
     public void reset()
     {
+
+        NGCount = 0;
         crystalizedMotivationBoost = 0;
-            crystalizedMotivation = 0;
+        crystalizedMotivation = 0;
 
-            crystalizedMotivationOnNGPlus = 0;
-            crystalizedMotivationBoostOnNGPlus = 0;
+        crystalizedMotivationOnNGPlus = 0;
+        crystalizedMotivationBoostOnNGPlus = 0;
 
-            currency = 0;
-            currencyPerClickValue = 1;
-            runCurrency = 0;
+        currency = 0;
+        currencyPerClickValue = 1;
+        runCurrency = 0;
 
-            bookCost = 10;
-            bookProduction = 0;
-            bookAmount = 0;
-            upgradeBookCost = 50;
-            upgradeBookProduction = 1;
-            upgradeBookAmount = 0;
+        bookCost = 10;
+        bookProduction = 0;
+        bookAmount = 0;
+        upgradeBookCost = 50;
+        upgradeBookProduction = 1;
+        upgradeBookAmount = 0;
 
-            posterCost = 50;
-            posterProduction = 0;
-            posterAmount = 0;
-            upgradePosterCost = 100;
-            upgradePosterProduction = 1;
-            upgradePosterAmount = 0;
+        posterCost = 50;
+        posterProduction = 0;
+        posterAmount = 0;
+        upgradePosterCost = 100;
+        upgradePosterProduction = 1;
+        upgradePosterAmount = 0;
+    
+        videoCost = 100;
+        videoProduction = 0;
+        videoAmount = 0;
+        upgradeVideoCost = 200;
+        upgradeVideoProduction = 1;
+        upgradeVideoAmount = 0;
         
-            videoCost = 100;
-            videoProduction = 0;
-            videoAmount = 0;
-            upgradeVideoCost = 200;
-            upgradeVideoProduction = 1;
-            upgradeVideoAmount = 0;
-            
-            motivationalClassCost = 500;
-            motivationalClassProduction = 0;
-            motivationalClassAmount = 0;
-            upgradeMotivationalClassCost = 1000;
-            upgradeMotivationalClassProduction = 1;
-            upgradeMotivationalClassAmount = 0;
+        motivationalClassCost = 500;
+        motivationalClassProduction = 0;
+        motivationalClassAmount = 0;
+        upgradeMotivationalClassCost = 1000;
+        upgradeMotivationalClassProduction = 1;
+        upgradeMotivationalClassAmount = 0;
 
-            motivationalSpeakingCost = 1000;
-            motivationalSpeakingProduction = 0;
-            motivationalSpeakingAmount = 0;
-            upgradeMotivationalSpeakingCost = 2000;
-            upgradeMotivationalSpeakingProduction = 1;
-            upgradeMotivationalSpeakingAmount = 0;
+        motivationalSpeakingCost = 1000;
+        motivationalSpeakingProduction = 0;
+        motivationalSpeakingAmount = 0;
+        upgradeMotivationalSpeakingCost = 2000;
+        upgradeMotivationalSpeakingProduction = 1;
+        upgradeMotivationalSpeakingAmount = 0;
 
-            motivationalSerumCost = 1500;
-            motivationalSerumProduction = 0;
-            motivationalSerumAmount = 0;
-            upgradeMotivationalSerumCost = 3000;
-            upgradeMotivationalSerumProduction = 1;
-            upgradeMotivationalSerumAmount = 0;
+        motivationalSerumCost = 1500;
+        motivationalSerumProduction = 0;
+        motivationalSerumAmount = 0;
+        upgradeMotivationalSerumCost = 3000;
+        upgradeMotivationalSerumProduction = 1;
+        upgradeMotivationalSerumAmount = 0;
 
-            motivationalBookCost = 2000;
-            motivationalBookProduction = 0;
-            motivationalBookAmount = 0;
-            upgradeMotivationalBookCost = 4000;
-            upgradeMotivationalBookProduction = 1;
-            upgradeMotivationalBookAmount = 0;
+        motivationalBookCost = 2000;
+        motivationalBookProduction = 0;
+        motivationalBookAmount = 0;
+        upgradeMotivationalBookCost = 4000;
+        upgradeMotivationalBookProduction = 1;
+        upgradeMotivationalBookAmount = 0;
 
-            motivationalCultCost = 2500;
-            motivationalCultProduction = 0;
-            motivationalCultAmount = 0;
-            upgradeMotivationalCultCost = 5000;
-            upgradeMotivationalCultProduction = 1;
-            upgradeMotivationalCultAmount = 0;
+        motivationalCultCost = 2500;
+        motivationalCultProduction = 0;
+        motivationalCultAmount = 0;
+        upgradeMotivationalCultCost = 5000;
+        upgradeMotivationalCultProduction = 1;
+        upgradeMotivationalCultAmount = 0;
 
-            motivationalTEDTalksCost = 3000;
-            motivationalTEDTalksProduction = 0;
-            motivationalTEDTalksAmount = 0;
-            upgradeMotivationalTEDTalksCost = 6000;
-            upgradeMotivationalTEDTalksProduction = 1;
-            upgradeMotivationalTEDTalksAmount = 0;
+        motivationalTEDTalksCost = 3000;
+        motivationalTEDTalksProduction = 0;
+        motivationalTEDTalksAmount = 0;
+        upgradeMotivationalTEDTalksCost = 6000;
+        upgradeMotivationalTEDTalksProduction = 1;
+        upgradeMotivationalTEDTalksAmount = 0;
     }
 
     // Start is called before the first frame update
@@ -285,7 +287,7 @@ public class prototype4_script : MonoBehaviour
         crystalizedMotivation = double.Parse(PlayerPrefs.GetString("crystalizedMotivation", "0"));
         crystalizedMotivationBoost = double.Parse(PlayerPrefs.GetString("crystalizedMotivationBoost", "0"));
         runCurrency = double.Parse(PlayerPrefs.GetString("runCurrency", "0"));
-
+        NGCount = double.Parse(PlayerPrefs.GetString("NGCount", "0"));
         //double.Parse(PlayerPrefs.GetString(""))
     }
 
@@ -363,6 +365,7 @@ public class prototype4_script : MonoBehaviour
         PlayerPrefs.SetString("crystalizedMotivationBoost", crystalizedMotivationBoost.ToString());
         PlayerPrefs.SetString("crystalizedMotivation", crystalizedMotivation.ToString());
         PlayerPrefs.SetString("runCurrency", runCurrency.ToString());
+        PlayerPrefs.SetString("NGCount", NGCount.ToString());
 
         //PlayerPrefs.SetString();
     }
@@ -394,7 +397,7 @@ public class prototype4_script : MonoBehaviour
     public void calcNGPlusCrystals()
     {
         crystalizedMotivationOnNGPlus = System.Math.Sqrt(System.Math.Sqrt(runCurrency / 1e10));
-        crystalizedMotivationBoostOnNGPlus = crystalizedMotivationOnNGPlus/1e4;
+        crystalizedMotivationBoostOnNGPlus = (crystalizedMotivationOnNGPlus/1e4) + 1;
         crystalizedMotivationOnNGPlusText.text = "Next Run \nCrystalized Motivation: " + ExponentConvert(crystalizedMotivationOnNGPlus) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoostOnNGPlus);
 
         crystalizedMotivationText.text = "Crystalized Motivation: " + ExponentConvert(crystalizedMotivation) + "\nBoost:" + ExponentConvert(crystalizedMotivationBoost);
@@ -486,8 +489,8 @@ public class prototype4_script : MonoBehaviour
     void CalculateCurrency()
     {
         currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
-        currency += (currencyPerSec * (1 * crystalizedMotivationBoost)) * Time.deltaTime; //multiple by delta time
-        runCurrency += (currencyPerSec * (1 * crystalizedMotivationBoost)) * Time.deltaTime;
+        currency += (currencyPerSec * crystalizedMotivationBoost) * Time.deltaTime; //multiple by delta time
+        runCurrency += (currencyPerSec * crystalizedMotivationBoost) * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -496,6 +499,7 @@ public class prototype4_script : MonoBehaviour
         CalculateCurrency();
         currencyText.text  = "Motivation: " + ExponentConvert(currency);
         currencyPerSecText.text = "Motivation/sec: " + ExponentConvert(currencyPerSec);
+        NGCountText.text = "New Game Count " + NGCount.ToString();
 
         bookText.text = "Book Cost:" + ExponentConvert(bookCost);
         bookToolTip.text = "Book production: " + ExponentConvert(bookProduction) + "\nAmount: " + ExponentConvert(bookAmount);
@@ -559,7 +563,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - bookCost;
             bookProduction += 0.1;
             bookAmount += 1;
-            bookCost *= 1.5;
+            bookCost *= 1.3;
         }
     }
 
@@ -570,7 +574,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - posterCost;
             posterProduction += 1;
             posterAmount += 1;
-            posterCost *= 1.6;
+            posterCost *= 1.4;
         }
     }
 
@@ -581,7 +585,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - videoCost;
             videoProduction += 5;
             videoAmount += 1;
-            videoCost *= 1.7;
+            videoCost *= 1.5;
         }
     }
 
@@ -592,7 +596,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalClassCost;
             motivationalClassProduction += 10;
             motivationalClassAmount += 1;
-            motivationalClassCost *= 1.8;
+            motivationalClassCost *= 1.6;
         }
     }
 
@@ -603,7 +607,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalSpeakingCost;
             motivationalSpeakingProduction += 50;
             motivationalSpeakingAmount += 1;
-            motivationalSpeakingCost *= 1.9;
+            motivationalSpeakingCost *= 1.7;
         }
     }
 
@@ -614,7 +618,7 @@ public class prototype4_script : MonoBehaviour
             currency = currency - motivationalSerumCost;
             motivationalSerumProduction += 100;
             motivationalSerumAmount += 1;
-            motivationalSerumCost *= 2;
+            motivationalSerumCost *= 1.8;
         }
     }
 
