@@ -533,7 +533,7 @@ public class prototype4_script : MonoBehaviour
         upgradeMotivationalTEDTalksText.text = "Upgrade Motivational TED Talks \nCost: " + ExponentConvert(upgradeMotivationalTEDTalksCost);
         upgradeMotivationalTEDTalksToolTip.text = "Boost: *" + ExponentConvert(upgradeMotivationalTEDTalksProduction) + "\nAmount: " + ExponentConvert(upgradeMotivationalTEDTalksAmount);
 
-        calcNGPlusCrystals()
+        calcNGPlusCrystals();
 
         AutoSave();
     }
