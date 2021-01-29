@@ -404,6 +404,8 @@ public class prototype4_script : MonoBehaviour
     {
         if(runCurrency > 1e10)
         {
+            NGCount += 1;
+            NGCountText.text = "New Game Count " + NGCount.ToString();
             crystalizedMotivationBoost += crystalizedMotivationBoostOnNGPlus;
             crystalizedMotivation += crystalizedMotivationOnNGPlus;
 
@@ -476,8 +478,8 @@ public class prototype4_script : MonoBehaviour
             upgradeMotivationalTEDTalksCost = 6000;
             upgradeMotivationalTEDTalksProduction = 1;
             upgradeMotivationalTEDTalksAmount = 0;
+        
         }
-                
     }
 
     //function to calculate production
@@ -485,7 +487,7 @@ public class prototype4_script : MonoBehaviour
     {
         currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
         currency += (currencyPerSec * (1 * crystalizedMotivationBoost)) * Time.deltaTime; //multiple by delta time
-        runCurrency += currencyPerSec * Time.deltaTime;
+        runCurrency += (currencyPerSec * (1 * crystalizedMotivationBoost)) * Time.deltaTime;
     }
 
     // Update is called once per frame
