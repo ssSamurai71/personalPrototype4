@@ -489,8 +489,8 @@ public class prototype4_script : MonoBehaviour
     void CalculateCurrency()
     {
         currencyPerSec = bookProduction + posterProduction + videoProduction + motivationalSpeakingProduction + motivationalClassProduction + motivationalSerumProduction + motivationalBookProduction + motivationalCultProduction + motivationalTEDTalksProduction;
-        currency += (currencyPerSec * crystalizedMotivationBoost) * Time.deltaTime; //multiple by delta time
-        runCurrency += (currencyPerSec * crystalizedMotivationBoost) * Time.deltaTime;
+        currency += currencyPerSec * Time.deltaTime; //multiple by delta time
+        runCurrency += currencyPerSec * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -561,7 +561,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= bookCost)
         {
             currency = currency - bookCost;
-            bookProduction += 0.1;
+            bookProduction += 0.1 * crystalizedMotivationBoost;
             bookAmount += 1;
             bookCost *= 1.3;
         }
@@ -572,7 +572,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= posterCost)
         {
             currency = currency - posterCost;
-            posterProduction += 1;
+            posterProduction += 1 * crystalizedMotivationBoost;
             posterAmount += 1;
             posterCost *= 1.4;
         }
@@ -583,7 +583,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= videoCost)
         {
             currency = currency - videoCost;
-            videoProduction += 5;
+            videoProduction += 5 * crystalizedMotivationBoost;
             videoAmount += 1;
             videoCost *= 1.5;
         }
@@ -594,7 +594,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalClassCost)
         {
             currency = currency - motivationalClassCost;
-            motivationalClassProduction += 10;
+            motivationalClassProduction += 10 * crystalizedMotivationBoost;
             motivationalClassAmount += 1;
             motivationalClassCost *= 1.6;
         }
@@ -605,7 +605,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalSpeakingCost)
         {
             currency = currency - motivationalSpeakingCost;
-            motivationalSpeakingProduction += 50;
+            motivationalSpeakingProduction += 50 * crystalizedMotivationBoost;
             motivationalSpeakingAmount += 1;
             motivationalSpeakingCost *= 1.7;
         }
@@ -616,7 +616,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalSerumCost)
         {
             currency = currency - motivationalSerumCost;
-            motivationalSerumProduction += 100;
+            motivationalSerumProduction += 100 * crystalizedMotivationBoost;
             motivationalSerumAmount += 1;
             motivationalSerumCost *= 1.8;
         }
@@ -626,7 +626,7 @@ public class prototype4_script : MonoBehaviour
     {
         if(currency >= motivationalBookCost)
         {
-            currency = currency - motivationalBookCost;
+            currency = currency - motivationalBookCost * crystalizedMotivationBoost;
             motivationalBookProduction += 200;
             motivationalBookAmount += 1;
             motivationalBookCost *= 2.1;
@@ -638,7 +638,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalCultCost)
         {
             currency = currency - motivationalCultCost;
-            motivationalCultProduction += 400;
+            motivationalCultProduction += 400 * crystalizedMotivationBoost;
             motivationalCultAmount += 1;
             motivationalCultCost *= 2.2;
         }
@@ -649,7 +649,7 @@ public class prototype4_script : MonoBehaviour
         if(currency >= motivationalTEDTalksCost)
         {
             currency = currency - motivationalTEDTalksCost;
-            motivationalTEDTalksProduction += 800;
+            motivationalTEDTalksProduction += 800 * crystalizedMotivationBoost;
             motivationalTEDTalksAmount += 1;
             motivationalTEDTalksCost *= 2.3;
         }
