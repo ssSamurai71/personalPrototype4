@@ -1,4 +1,7 @@
-﻿using System.Collections;
+//This file was made by Arthur Hui in spring 2021. 
+//It calles functions from the achievement folder.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
